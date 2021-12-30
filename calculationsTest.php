@@ -2,7 +2,7 @@
 use PHPUnit\Framework\TestCase;
 require_once(__DIR__ . "/calculations.php");
 
-class testCalculations extends TestCase 
+class calculationsTest extends TestCase 
 {
 	/**
 	 * Runs before testing
@@ -31,6 +31,17 @@ class testCalculations extends TestCase
 
 		// Testing the add function of the calculations class with our testing variables. the expected output it 12
 		$this->assertEquals(12, $this->calculations->add($a, $b));
+	}
+
+	/**
+	 * Function tests the substract function
+	 */
+	public function testSubstract()
+	{
+		$a = 10;
+		$b = 15;
+
+		$this->assertEquals(-5, $this->calculations->substract($a, $b));
 	}
 }
 ?>
